@@ -1,0 +1,414 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --rp-bg: #fbfaf6;
+  --rp-ink: #1b1b1b;
+  --rp-body: #2c2c2c;
+  --rp-muted: #6b675e;
+  --rp-faint: #a09c93;
+  --rp-rule: #ddd9cf;
+  --rp-link: #6b1d1d;
+  --rp-link-hover: #1b1b1b;
+}
+
+html, body {
+  background: var(--rp-bg);
+  color: var(--rp-body);
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lora", "Charter", "Iowan Old Style", "Georgia", serif;
+  font-size: 17px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+/* =====================================================================
+   Research-paper page styling.
+   Single column, generous margins, restrained palette, serif body.
+   ===================================================================== */
+
+.research-page {
+  min-height: 100vh;
+  padding: 3rem 1.25rem 4rem;
+}
+
+.research-article {
+  max-width: 38rem;            /* ~608px reading column */
+  margin: 0 auto;
+  color: var(--rp-body);
+}
+
+/* Header / title block ------------------------------------------------ */
+
+.rp-header {
+  text-align: center;
+  margin-bottom: 2.75rem;
+}
+
+.rp-title {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: -0.01em;
+  color: var(--rp-ink);
+  margin: 0 0 0.4rem;
+  line-height: 1.15;
+}
+
+.rp-byline {
+  font-style: italic;
+  color: var(--rp-body);
+  margin: 0 0 0.15rem;
+  font-size: 1rem;
+}
+
+.rp-affiliation {
+  color: var(--rp-muted);
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.rp-date {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  color: var(--rp-faint);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* Abstract ------------------------------------------------------------ */
+
+.rp-abstract {
+  margin: 2.5rem 0 2.25rem;
+  padding: 0 1.25rem;
+  font-size: 0.95rem;
+  color: var(--rp-body);
+}
+
+.rp-abstract p {
+  margin: 0;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.rp-abstract-label {
+  text-align: center;
+  font-family: "Lora", serif;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  color: var(--rp-muted);
+  margin: 0 0 0.6rem;
+  font-weight: 400;
+}
+
+/* Rules between sections --------------------------------------------- */
+
+.rp-rule {
+  border: none;
+  border-top: 1px solid var(--rp-rule);
+  margin: 2.25rem auto;
+  width: 4rem;
+}
+
+/* Sections ----------------------------------------------------------- */
+
+.rp-section {
+  margin: 2.25rem 0;
+}
+
+.rp-section p {
+  margin: 0.85rem 0;
+}
+
+.rp-section-title {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--rp-ink);
+  margin: 0 0 0.8rem;
+  letter-spacing: -0.005em;
+}
+
+.rp-subsection-title {
+  font-family: "Lora", serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--rp-ink);
+  margin: 1.5rem 0 0.4rem;
+  font-style: italic;
+}
+
+.rp-num {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-weight: 400;
+  color: var(--rp-muted);
+  font-size: 0.85em;
+  margin-right: 0.5em;
+}
+
+.rp-meta {
+  color: var(--rp-muted);
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.rp-meta-line {
+  color: var(--rp-muted);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin: 0.25rem 0 1rem !important;
+}
+
+/* Lists -------------------------------------------------------------- */
+
+.rp-list {
+  list-style: lower-roman;
+  padding-left: 1.75rem;
+  margin: 0.8rem 0;
+}
+
+.rp-list li {
+  margin: 0.45rem 0;
+}
+
+.rp-principles {
+  list-style: lower-roman;
+  padding-left: 1.75rem;
+  margin: 0.8rem 0;
+  color: var(--rp-body);
+}
+
+.rp-principles li {
+  margin: 0.4rem 0;
+  padding-left: 0.25rem;
+}
+
+/* Definition list (past experiments) -------------------------------- */
+
+.rp-dl {
+  margin: 0.6rem 0;
+}
+
+.rp-dl dt {
+  font-weight: 700;
+  color: var(--rp-ink);
+  margin-top: 1rem;
+}
+
+.rp-dl dt:first-child {
+  margin-top: 0;
+}
+
+.rp-dl dd {
+  margin: 0.25rem 0 0 0;
+  padding-left: 1.5rem;
+  color: var(--rp-body);
+}
+
+/* Table of projects -------------------------------------------------- */
+
+.rp-table {
+  width: 100%;
+  margin-top: 0.5rem;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+
+.rp-table tr {
+  border-bottom: 1px dotted var(--rp-rule);
+}
+
+.rp-table tr:last-child {
+  border-bottom: none;
+}
+
+.rp-table td {
+  padding: 0.55rem 0;
+  vertical-align: top;
+}
+
+.rp-table-name {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.88rem;
+  white-space: nowrap;
+  padding-right: 1rem !important;
+  width: 11rem;
+  color: var(--rp-ink);
+}
+
+.rp-table-desc {
+  color: var(--rp-body);
+}
+
+/* Links --------------------------------------------------------------- */
+
+.research-article a {
+  color: var(--rp-link);
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2.5px;
+  text-decoration-color: rgba(107, 29, 29, 0.4);
+  transition: color 120ms ease, text-decoration-color 120ms ease;
+}
+
+.research-article a:hover {
+  color: var(--rp-link-hover);
+  text-decoration-color: var(--rp-link-hover);
+}
+
+.rp-arrow-link {
+  font-style: italic;
+}
+
+/* Footer ------------------------------------------------------------- */
+
+.rp-footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--rp-muted);
+}
+
+.rp-correspondence {
+  font-size: 0.8rem !important;
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  font-weight: 400 !important;
+  text-align: center;
+  color: var(--rp-muted);
+  margin-bottom: 0.6rem;
+}
+
+.rp-footer p {
+  text-align: center;
+  margin: 0.4rem 0;
+}
+
+.rp-colophon {
+  margin-top: 1.5rem !important;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: var(--rp-faint);
+}
+
+/* ======= Sub-page chrome shared by /writing, /arts, /physics ======= */
+
+.rp-backlink {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--rp-muted);
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.rp-backlink:hover {
+  color: var(--rp-ink);
+  text-decoration: underline;
+}
+
+/* Writing post body (overrides for ReactMarkdown content) ------------ */
+
+.rp-post-body {
+  color: var(--rp-body);
+  font-size: 1.02rem;
+  line-height: 1.72;
+}
+
+.rp-post-body p {
+  margin: 1.1rem 0;
+  white-space: pre-line;
+}
+
+.rp-post-body p:first-child::first-letter {
+  font-size: 3.1rem;
+  font-weight: 700;
+  float: left;
+  line-height: 1;
+  padding: 0.35rem 0.5rem 0 0;
+  color: var(--rp-ink);
+  font-family: "Lora", serif;
+}
+
+.rp-post-body h1,
+.rp-post-body h2,
+.rp-post-body h3 {
+  font-family: "Lora", serif;
+  color: var(--rp-ink);
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
+}
+
+.rp-post-body h1 { font-size: 1.45rem; }
+.rp-post-body h2 { font-size: 1.25rem; }
+.rp-post-body h3 { font-size: 1.1rem; font-style: italic; }
+
+.rp-post-body blockquote {
+  border-left: 2px solid var(--rp-rule);
+  padding-left: 1rem;
+  color: var(--rp-muted);
+  font-style: italic;
+  margin: 1.25rem 0;
+}
+
+.rp-post-body em { font-style: italic; }
+.rp-post-body strong { color: var(--rp-ink); }
+
+.rp-post-body ul,
+.rp-post-body ol {
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+.rp-post-body li { margin: 0.35rem 0; }
+
+.rp-post-body a {
+  color: var(--rp-link);
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 2.5px;
+}
+
+.rp-post-body a:hover { color: var(--rp-link-hover); }
+
+.rp-post-body code {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.88em;
+  background: rgba(0, 0, 0, 0.04);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.rp-post-body hr {
+  border: none;
+  border-top: 1px solid var(--rp-rule);
+  margin: 2rem auto;
+  width: 5rem;
+}
+
+/* Responsive ---------------------------------------------------------- */
+
+@media (max-width: 540px) {
+  .research-page { padding: 2rem 1rem 3rem; }
+  .rp-title { font-size: 1.7rem; }
+  .rp-abstract { padding: 0; font-size: 0.95rem; }
+  body { font-size: 16.5px; }
+  .rp-table-name { width: auto; display: block; padding-bottom: 0.15rem !important; }
+  .rp-table td { display: block; padding: 0.3rem 0; }
+  .rp-table tr { padding: 0.5rem 0; }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+}

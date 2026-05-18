@@ -1,0 +1,303 @@
+import Link from "next/link"
+
+interface PhysicsProgress {
+  percentage: number;
+  currentTopic: string;
+}
+
+interface PersonalWebsiteProps {
+  physicsProgress: PhysicsProgress;
+}
+
+export default function PersonalWebsite({ physicsProgress: _physicsProgress }: PersonalWebsiteProps) {
+  return (
+    <main className="research-page">
+      <article className="research-article">
+
+        <header className="rp-header">
+          <h1 className="rp-title">Harshal Singh</h1>
+          <p className="rp-byline">Independent researcher &middot; builder</p>
+          <p className="rp-affiliation">
+            gladium.ai &middot; based in India
+          </p>
+          <p className="rp-date">Last updated May 2026</p>
+        </header>
+
+        <section className="rp-abstract">
+          <h2 className="rp-abstract-label">Abstract</h2>
+          <p>
+            I am an independent researcher and engineer working on small,
+            expressive Hinglish text-to-speech systems and applied AI for
+            businesses through{" "}
+            <a href="https://gladium.ai" target="_blank" rel="noopener noreferrer">gladium.ai</a>.
+            My broader interests are in computer science, mathematics,
+            physics, hardware, and emerging technology. I learned most of
+            what I know from the internet, and I believe in{" "}
+            <a href="https://a16z.com/the-techno-optimist-manifesto/" target="_blank" rel="noopener noreferrer">techno-optimism</a>{" "}
+            and{" "}
+            <a href="https://en.wikipedia.org/wiki/Effective_accelerationism" target="_blank" rel="noopener noreferrer">effective accelerationism</a>.
+            My plan is to build profitable companies that accelerate human
+            progress.
+          </p>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <section className="rp-section">
+          <h2 className="rp-section-title"><span className="rp-num">1.</span> Current research</h2>
+
+          <h3 className="rp-subsection-title"><span className="rp-num">1.1</span> Hinglish text-to-speech</h3>
+          <p>
+            Building the world&rsquo;s smallest and best Hinglish TTS &mdash; sub&ndash;25M
+            trainable parameters, expressive narration, code-switch native.
+            An open progress preview lives at{" "}
+            <a href="https://harrrshall.github.io/hinglish-tts/" target="_blank" rel="noopener noreferrer">harrrshall.github.io/hinglish-tts</a>{" "}
+            <span className="rp-meta">(approximately 30 / 100)</span>.
+          </p>
+          <p>
+            I am racing four architectures in parallel against a single
+            T4 budget:
+          </p>
+          <ol className="rp-list">
+            <li>
+              <em>Matcha-TTS</em> at &asymp; 22M parameters, with a
+              Hindi-fine-tuned multilingual PL-BERT and an
+              EmoSpeech-style per-phoneme emotion head.
+            </li>
+            <li>
+              <em>IndicParler-TTS</em> distillation into a StyleTTS2-lite
+              student with composite-reward DPO.
+            </li>
+            <li>
+              A <em>Mimi-codec + 15&ndash;20M GLA / RWKV-7</em> language model
+              moonshot targeting true zero-shot voice cloning.
+            </li>
+            <li>
+              <em>StyleTTS2-lite</em> warm-started from Kokoro v1.0 with a
+              distilled style-diffusion head.
+            </li>
+          </ol>
+          <p>
+            Beyond architecture, I am pushing expressivity past the
+            &ldquo;four emotion buttons&rdquo; ceiling using an{" "}
+            <em>EmoSphere++</em> continuous valence&ndash;arousal&ndash;dominance head
+            and training-free <em>EmoSteer-TTS</em> activation steering &mdash;
+            continuous emotion sliders at inference time, no retraining
+            required.
+          </p>
+          <p>
+            Every research bet gates through a 2&ndash;8 hour &ldquo;kill-fast&rdquo;
+            listening test on a T4 before any serious training, ear-tuned
+            for the long tail of Hinglish: retroflex consonants, schwa
+            deletion, and code-switch artifacts.
+          </p>
+
+          <h3 className="rp-subsection-title"><span className="rp-num">1.2</span> gladium.ai</h3>
+          <p>
+            Helping businesses integrate AI solutions, from idea to
+            production. Custom agents, model deployment, and the unsexy
+            plumbing that makes them actually ship.{" "}
+            <a href="https://gladium.ai" target="_blank" rel="noopener noreferrer">Visit gladium.ai &rarr;</a>
+          </p>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <section className="rp-section">
+          <h2 className="rp-section-title"><span className="rp-num">2.</span> Writing</h2>
+          <p>
+            Essays at the intersection of work, love, philosophy, and
+            future technology.{" "}
+            <Link href="/writing" className="rp-arrow-link">View all essays &rarr;</Link>
+          </p>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <section className="rp-section">
+          <h2 className="rp-section-title"><span className="rp-num">3.</span> Past experiments</h2>
+
+          <dl className="rp-dl">
+            <dt>
+              <span className="rp-num">3.1</span> Humanless
+              <span className="rp-meta"> &middot; <a href="https://humanless.site" target="_blank" rel="noopener noreferrer">humanless.site</a></span>
+            </dt>
+            <dd>
+              A plug-and-play AI tool that transforms existing CCTV footage
+              into actionable business insights. Connect existing cameras,
+              analyze in real time, get reports. Aimed at retail and
+              hospitality.
+            </dd>
+
+            <dt>
+              <span className="rp-num">3.2</span> IFarc
+            </dt>
+            <dd>
+              AI-powered compliance automation for Registered Investment
+              Advisors: automated recordkeeping (Rule 204-2), code-of-ethics
+              monitoring, client onboarding, and marketing review for SEC
+              compliance. The teacher here was the regulated industry
+              itself.
+            </dd>
+
+            <dt>
+              <span className="rp-num">3.3</span> AI Video Creation Platform
+            </dt>
+            <dd>
+              An experiment in automating high-quality YouTube video
+              creation end to end. Prompt in, ready-to-publish content out.
+              Spun off three open-source siblings &mdash; Open Podcast (text to
+              podcast), Open Dubbing (video dubbing &amp; audiobooks), and
+              Connected Podcast (AI-simulated conversations with
+              historical figures).
+            </dd>
+
+            <dt>
+              <span className="rp-num">3.4</span> Historical Conversations
+            </dt>
+            <dd>
+              Imagined conversations with Ramanujan, Steve Jobs, and Nikola
+              Tesla.{" "}
+              <a href="https://open.spotify.com/episode/1cQs2EVEVYnZHoweeSCBvU?si=K0iqU3EhQLy76EKD_N3Mug" target="_blank" rel="noopener noreferrer">Listen on Spotify &rarr;</a>
+            </dd>
+          </dl>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <section className="rp-section">
+          <h2 className="rp-section-title"><span className="rp-num">4.</span> Projects &amp; code</h2>
+          <p className="rp-meta-line">A selection. All open source.</p>
+
+          <table className="rp-table">
+            <tbody>
+              {PROJECTS.map((p) => (
+                <tr key={p.title}>
+                  <td className="rp-table-name">
+                    <a href={p.github} target="_blank" rel="noopener noreferrer">{p.title}</a>
+                  </td>
+                  <td className="rp-table-desc">{p.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <section className="rp-section">
+          <h2 className="rp-section-title"><span className="rp-num">5.</span> Operating principles</h2>
+          <ol className="rp-principles" type="i">
+            {PRINCIPLES.map((p) => (<li key={p}>{p}</li>))}
+          </ol>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <section className="rp-section">
+          <h2 className="rp-section-title"><span className="rp-num">6.</span> Other</h2>
+          <p>
+            <Link href="/arts" className="rp-arrow-link">Arts &amp; music &rarr;</Link> &middot;{" "}
+            <Link href="/physics" className="rp-arrow-link">Physics self-study log &rarr;</Link>
+          </p>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <footer className="rp-footer">
+          <h2 className="rp-section-title rp-correspondence">Correspondence</h2>
+          <p>
+            <a href="https://github.com/harrrshall" target="_blank" rel="noopener noreferrer">github.com/harrrshall</a> &middot;{" "}
+            <a href="https://x.com/HarshalsinghCN" target="_blank" rel="noopener noreferrer">x.com/HarshalsinghCN</a> &middot;{" "}
+            <a href="https://www.linkedin.com/in/harshalsinghcn/" target="_blank" rel="noopener noreferrer">linkedin.com/in/harshalsinghcn</a>
+          </p>
+          <p className="rp-colophon">
+            &copy; {new Date().getFullYear()} Harshal Singh. Set in Lora.
+            Typeset with Next.js. Served from GitHub Pages.
+          </p>
+        </footer>
+
+      </article>
+    </main>
+  )
+}
+
+const PROJECTS = [
+  {
+    title: "twitter-memory",
+    description: "MV3 Chrome extension that captures your Twitter attention log — tweets, sessions, dwell time — into a local SQLite DB with daily markdown exports.",
+    github: "https://github.com/harrrshall/twitter-memory",
+  },
+  {
+    title: "postforge",
+    description: "Self-improving LinkedIn content engine — multi-agent simulation, EMA weight calibration, 10-persona debate threads, cron automation.",
+    github: "https://github.com/harrrshall/postforge",
+  },
+  {
+    title: "skore",
+    description: "Production-grade chatbot for JEE/NEET students, trained on YouTube videos and Reddit threads.",
+    github: "https://github.com/harrrshall/skore",
+  },
+  {
+    title: "mini_alphafold",
+    description: "A minimal implementation of AlphaFold for protein structure prediction.",
+    github: "https://github.com/harrrshall/mini_alphafold",
+  },
+  {
+    title: "ask_shr_krishna",
+    description: "AI-powered Bhagavad Gita Q&A system.",
+    github: "https://github.com/harrrshall/ask_shr_krishna",
+  },
+  {
+    title: "picrate",
+    description: "An appearance analyzer — AI tool that scores facial images.",
+    github: "https://github.com/harrrshall/picrate",
+  },
+  {
+    title: "gpt2-accelerator-chip",
+    description: "Designing a GPT-2 accelerator chip from scratch in under four weeks.",
+    github: "https://github.com/harrrshall/gpt2-accelerator-chip",
+  },
+  {
+    title: "blogify",
+    description: "Transform podcasts into engaging blog posts.",
+    github: "https://github.com/harrrshall/blogify",
+  },
+  {
+    title: "CalorieCam",
+    description: "Count calories from food images using computer vision.",
+    github: "https://github.com/harrrshall/CalorieCam",
+  },
+  {
+    title: "webscribe",
+    description: "Chat with websites interactively.",
+    github: "https://github.com/harrrshall/webscribe",
+  },
+  {
+    title: "DataDigitalizer",
+    description: "Bridge physical and digital data.",
+    github: "https://github.com/harrrshall/DataDigitalizer",
+  },
+  {
+    title: "LLAMA_-from_scratch",
+    description: "Implement LLAMA from the ground up.",
+    github: "https://github.com/harrrshall/LLAMA_-from_scratch",
+  },
+  {
+    title: "Open-Dubbing",
+    description: "Open-source video dubbing and audiobook creation tools.",
+    github: "https://github.com/harrrshall/Open-Dubbing",
+  },
+]
+
+const PRINCIPLES = [
+  "Move quickly; make plans for months and complete them in weeks.",
+  "No risk, no gain.",
+  "Do something that normal people cannot even dream of.",
+  "The opposite of success is mediocrity, not failure.",
+  "This time will pass; you will get old, you will die, so it does not matter.",
+  "No one is rich in time.",
+  "Competition is for losers.",
+  "The laws of physics are the only limit.",
+  "Model the world as 500 people rather than 8 billion.",
+]
