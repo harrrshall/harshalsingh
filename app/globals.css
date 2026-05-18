@@ -90,14 +90,27 @@ body {
 .rp-abstract {
   margin: 2.5rem 0 2.25rem;
   padding: 0 1.25rem;
-  font-size: 0.95rem;
+  font-size: 0.97rem;
   color: var(--rp-body);
+  line-height: 1.65;
 }
 
 .rp-abstract p {
   margin: 0;
-  text-align: justify;
-  hyphens: auto;
+  text-align: left;
+}
+
+.rp-abstract p + p {
+  margin-top: 0.7rem;
+}
+
+.rp-lede {
+  font-style: italic;
+  color: var(--rp-ink);
+  font-size: 1.02rem;
+  margin-bottom: 0.85rem !important;
+  text-align: center !important;
+  letter-spacing: 0.005em;
 }
 
 .rp-abstract-label {
@@ -107,7 +120,7 @@ body {
   letter-spacing: 0.12em;
   font-size: 0.8rem;
   color: var(--rp-muted);
-  margin: 0 0 0.6rem;
+  margin: 0 0 0.9rem;
   font-weight: 400;
 }
 

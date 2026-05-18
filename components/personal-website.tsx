@@ -22,20 +22,26 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
 
         <section className="rp-abstract">
           <h2 className="rp-abstract-label">Abstract</h2>
+          <p className="rp-lede">
+            I am an independent researcher and engineer.
+          </p>
           <p>
-            Independent researcher and engineer. I build small, expressive
-            Hinglish text-to-speech systems and ship applied AI for
-            businesses through{" "}
+            I build small, expressive Hinglish text-to-speech systems,
+            and ship applied AI for businesses through{" "}
             <a href="https://gladium.ai" target="_blank" rel="noopener noreferrer">gladium.ai</a>.
           </p>
           <p>
-            Broader interests in CS, mathematics, physics, and hardware.
-            Self-taught from the internet. I believe in{" "}
+            My broader interests are computer science, mathematics,
+            physics, and hardware. I learned almost everything I know
+            from the internet.
+          </p>
+          <p>
+            I believe in{" "}
             <a href="https://a16z.com/the-techno-optimist-manifesto/" target="_blank" rel="noopener noreferrer">techno-optimism</a>{" "}
             and{" "}
-            <a href="https://en.wikipedia.org/wiki/Effective_accelerationism" target="_blank" rel="noopener noreferrer">effective accelerationism</a>,
-            and intend to build profitable companies that accelerate human
-            progress.
+            <a href="https://en.wikipedia.org/wiki/Effective_accelerationism" target="_blank" rel="noopener noreferrer">effective accelerationism</a>.
+            The plan is to build profitable companies that accelerate
+            human progress.
           </p>
         </section>
 
