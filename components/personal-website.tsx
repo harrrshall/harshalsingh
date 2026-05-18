@@ -233,6 +233,11 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
 
 const PROJECTS = [
   {
+    title: "numpygrad",
+    description: "GPT-2 trained from scratch in pure NumPy, verified against PyTorch — with an accompanying blog post deriving the math line by line.",
+    github: "https://github.com/harrrshall/numpygrad",
+  },
+  {
     title: "twitter-memory",
     description: "MV3 Chrome extension that captures your Twitter attention log — tweets, sessions, dwell time — into a local SQLite DB with daily markdown exports.",
     github: "https://github.com/harrrshall/twitter-memory",
