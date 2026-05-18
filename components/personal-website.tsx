@@ -17,9 +17,6 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <header className="rp-header">
           <h1 className="rp-title">Harshal Singh</h1>
           <p className="rp-byline">Independent researcher &middot; builder</p>
-          <p className="rp-affiliation">
-            gladium.ai &middot; based in India
-          </p>
           <p className="rp-date">Last updated May 2026</p>
         </header>
 
@@ -44,9 +41,18 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <hr className="rp-rule" />
 
         <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">1.</span> Current research</h2>
+          <h2 className="rp-section-title"><span className="rp-num">1.</span> Operating principles</h2>
+          <ol className="rp-principles" type="i">
+            {PRINCIPLES.map((p) => (<li key={p}>{p}</li>))}
+          </ol>
+        </section>
 
-          <h3 className="rp-subsection-title"><span className="rp-num">1.1</span> Hinglish text-to-speech</h3>
+        <hr className="rp-rule" />
+
+        <section className="rp-section">
+          <h2 className="rp-section-title"><span className="rp-num">2.</span> Current research</h2>
+
+          <h3 className="rp-subsection-title"><span className="rp-num">2.1</span> Hinglish text-to-speech</h3>
           <p>
             Building the world&rsquo;s smallest and best Hinglish TTS &mdash; sub&ndash;25M
             trainable parameters, expressive narration, code-switch native.
@@ -92,7 +98,7 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             deletion, and code-switch artifacts.
           </p>
 
-          <h3 className="rp-subsection-title"><span className="rp-num">1.2</span> gladium.ai</h3>
+          <h3 className="rp-subsection-title"><span className="rp-num">2.2</span> gladium.ai</h3>
           <p>
             Helping businesses integrate AI solutions, from idea to
             production. Custom agents, model deployment, and the unsexy
@@ -104,7 +110,7 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <hr className="rp-rule" />
 
         <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">2.</span> Writing</h2>
+          <h2 className="rp-section-title"><span className="rp-num">3.</span> Writing</h2>
           <p>
             Essays at the intersection of work, love, philosophy, and
             future technology.{" "}
@@ -115,11 +121,11 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <hr className="rp-rule" />
 
         <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">3.</span> Past experiments</h2>
+          <h2 className="rp-section-title"><span className="rp-num">4.</span> Past experiments</h2>
 
           <dl className="rp-dl">
             <dt>
-              <span className="rp-num">3.1</span> Humanless
+              <span className="rp-num">4.1</span> Humanless
               <span className="rp-meta"> &middot; <a href="https://humanless.site" target="_blank" rel="noopener noreferrer">humanless.site</a></span>
             </dt>
             <dd>
@@ -130,7 +136,7 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             </dd>
 
             <dt>
-              <span className="rp-num">3.2</span> IFarc
+              <span className="rp-num">4.2</span> IFarc
             </dt>
             <dd>
               AI-powered compliance automation for Registered Investment
@@ -141,7 +147,7 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             </dd>
 
             <dt>
-              <span className="rp-num">3.3</span> AI Video Creation Platform
+              <span className="rp-num">4.3</span> AI Video Creation Platform
             </dt>
             <dd>
               An experiment in automating high-quality YouTube video
@@ -153,7 +159,7 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             </dd>
 
             <dt>
-              <span className="rp-num">3.4</span> Historical Conversations
+              <span className="rp-num">4.4</span> Historical Conversations
             </dt>
             <dd>
               Imagined conversations with Ramanujan, Steve Jobs, and Nikola
@@ -166,7 +172,7 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <hr className="rp-rule" />
 
         <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">4.</span> Projects &amp; code</h2>
+          <h2 className="rp-section-title"><span className="rp-num">5.</span> Projects &amp; code</h2>
           <p className="rp-meta-line">A selection. All open source.</p>
 
           <table className="rp-table">
@@ -181,15 +187,6 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
               ))}
             </tbody>
           </table>
-        </section>
-
-        <hr className="rp-rule" />
-
-        <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">5.</span> Operating principles</h2>
-          <ol className="rp-principles" type="i">
-            {PRINCIPLES.map((p) => (<li key={p}>{p}</li>))}
-          </ol>
         </section>
 
         <hr className="rp-rule" />
@@ -212,8 +209,7 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             <a href="https://www.linkedin.com/in/harshalsinghcn/" target="_blank" rel="noopener noreferrer">linkedin.com/in/harshalsinghcn</a>
           </p>
           <p className="rp-colophon">
-            &copy; {new Date().getFullYear()} Harshal Singh. Set in Lora.
-            Typeset with Next.js. Served from GitHub Pages.
+            &copy; {new Date().getFullYear()} Harshal Singh.
           </p>
         </footer>
 

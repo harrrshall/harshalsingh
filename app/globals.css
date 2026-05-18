@@ -399,14 +399,70 @@ body {
 
 /* Responsive ---------------------------------------------------------- */
 
-@media (max-width: 540px) {
-  .research-page { padding: 2rem 1rem 3rem; }
-  .rp-title { font-size: 1.7rem; }
-  .rp-abstract { padding: 0; font-size: 0.95rem; }
-  body { font-size: 16.5px; }
-  .rp-table-name { width: auto; display: block; padding-bottom: 0.15rem !important; }
-  .rp-table td { display: block; padding: 0.3rem 0; }
-  .rp-table tr { padding: 0.5rem 0; }
+@media (max-width: 720px) {
+  .research-page { padding: 2.25rem 1.1rem 3rem; }
+  .rp-header { margin-bottom: 2rem; }
+  .rp-title { font-size: 1.75rem; }
+  .rp-abstract { padding: 0 0.25rem; font-size: 0.95rem; margin: 1.75rem 0 1.75rem; }
+  .rp-abstract p { text-align: left; hyphens: none; }
+  body { font-size: 16.5px; line-height: 1.6; }
+  .rp-section { margin: 1.75rem 0; }
+  .rp-section-title { font-size: 1.1rem; }
+  .rp-subsection-title { font-size: 0.98rem; margin-top: 1.25rem; }
+  .rp-rule { margin: 1.85rem auto; }
+
+  /* Definition list — tighten indent so titles aren't pushed off-screen */
+  .rp-dl dt { line-height: 1.5; }
+  .rp-dl dd { padding-left: 1rem; font-size: 0.95rem; }
+
+  /* Numbered lists — pull list markers closer */
+  .rp-list, .rp-principles { padding-left: 1.4rem; }
+  .rp-principles li { padding-left: 0.1rem; }
+
+  /* Projects table — stack name above description */
+  .rp-table-name {
+    width: auto;
+    display: block;
+    padding-bottom: 0.15rem !important;
+    padding-right: 0 !important;
+    font-size: 0.92rem;
+  }
+  .rp-table-desc { display: block; padding-top: 0 !important; font-size: 0.9rem; }
+  .rp-table td { display: block; padding: 0.35rem 0; }
+  .rp-table tr { padding: 0.65rem 0; }
+
+  /* Drop cap — scaled down so it doesn't crowd small screens */
+  .rp-post-body { font-size: 1rem; line-height: 1.68; }
+  .rp-post-body p:first-child::first-letter {
+    font-size: 2.5rem;
+    padding: 0.3rem 0.4rem 0 0;
+  }
+
+  .rp-backlink { margin-bottom: 1.25rem; }
+}
+
+@media (max-width: 420px) {
+  .research-page { padding: 1.75rem 0.95rem 2.5rem; }
+  .rp-title { font-size: 1.55rem; letter-spacing: -0.005em; }
+  .rp-byline { font-size: 0.95rem; }
+  .rp-date { font-size: 0.7rem; }
+  body { font-size: 16px; }
+  .rp-section-title { font-size: 1.05rem; }
+  .rp-num { font-size: 0.8em; margin-right: 0.4em; }
+  .rp-abstract { font-size: 0.92rem; }
+  .rp-dl dd { padding-left: 0.85rem; font-size: 0.92rem; }
+  .rp-post-body p:first-child::first-letter {
+    font-size: 2.2rem;
+  }
+}
+
+/* Touch targets — make tap-able links a bit comfier on mobile */
+@media (hover: none) and (pointer: coarse) {
+  .research-article a {
+    text-decoration-thickness: 0.6px;
+    text-underline-offset: 3px;
+  }
+  .rp-backlink { padding: 0.25rem 0; }
 }
 
 @layer utilities {
