@@ -23,17 +23,18 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <section className="rp-abstract">
           <h2 className="rp-abstract-label">Abstract</h2>
           <p>
-            I am an independent researcher and engineer working on small,
-            expressive Hinglish text-to-speech systems and applied AI for
+            Independent researcher and engineer. I build small, expressive
+            Hinglish text-to-speech systems and ship applied AI for
             businesses through{" "}
             <a href="https://gladium.ai" target="_blank" rel="noopener noreferrer">gladium.ai</a>.
-            My broader interests are in computer science, mathematics,
-            physics, hardware, and emerging technology. I learned most of
-            what I know from the internet, and I believe in{" "}
+          </p>
+          <p>
+            Broader interests in CS, mathematics, physics, and hardware.
+            Self-taught from the internet. I believe in{" "}
             <a href="https://a16z.com/the-techno-optimist-manifesto/" target="_blank" rel="noopener noreferrer">techno-optimism</a>{" "}
             and{" "}
-            <a href="https://en.wikipedia.org/wiki/Effective_accelerationism" target="_blank" rel="noopener noreferrer">effective accelerationism</a>.
-            My plan is to build profitable companies that accelerate human
+            <a href="https://en.wikipedia.org/wiki/Effective_accelerationism" target="_blank" rel="noopener noreferrer">effective accelerationism</a>,
+            and intend to build profitable companies that accelerate human
             progress.
           </p>
         </section>
@@ -203,10 +204,22 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
 
         <footer className="rp-footer">
           <h2 className="rp-section-title rp-correspondence">Correspondence</h2>
-          <p>
-            <a href="https://github.com/harrrshall" target="_blank" rel="noopener noreferrer">github.com/harrrshall</a> &middot;{" "}
-            <a href="https://x.com/HarshalsinghCN" target="_blank" rel="noopener noreferrer">x.com/HarshalsinghCN</a> &middot;{" "}
-            <a href="https://www.linkedin.com/in/harshalsinghcn/" target="_blank" rel="noopener noreferrer">linkedin.com/in/harshalsinghcn</a>
+          <p className="rp-socials">
+            <a href="https://github.com/harrrshall" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="rp-social">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.27-.01-1.01-.02-1.98-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.19a11.06 11.06 0 0 1 5.79 0c2.21-1.5 3.18-1.19 3.18-1.19.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.77 1.06.77 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.67.8.56 4.57-1.52 7.86-5.83 7.86-10.91C23.5 5.65 18.35.5 12 .5z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/HarshalsinghCN" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="rp-social">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2H21.5l-7.5 8.575L23 22h-6.857l-5.376-7.06L4.6 22H1.34l8.04-9.19L1 2h7l4.86 6.46L18.244 2zm-2.41 18h1.9L7.255 4H5.21l10.624 16z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/harshalsinghcn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="rp-social">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+              </svg>
+            </a>
           </p>
           <p className="rp-colophon">
             &copy; {new Date().getFullYear()} Harshal Singh.

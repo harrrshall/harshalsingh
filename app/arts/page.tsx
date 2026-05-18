@@ -1,5 +1,7 @@
 import Link from "next/link"
 import { MEDIA } from "@/lib/media"
+import { LyricsPlayer } from "@/components/lyrics-player"
+import { LYRICS_BY_TRACK } from "@/content/lyrics"
 
 export const metadata = {
     title: "Arts | Harshal Singh",
@@ -31,31 +33,19 @@ export default function ArtsPage() {
 
                 <hr className="rp-rule" />
 
-                <section className="rp-section">
-                    <dl className="rp-dl">
-                        {TRACKS.map((t, i) => (
-                            <div key={t.id} style={{ marginBottom: "1.5rem" }}>
-                                <dt>
-                                    <span className="rp-num">{String(i + 1).padStart(2, "0")}.</span>
-                                    {t.title}
-                                    <span className="rp-meta">
-                                        {" "}&middot; {t.year} &middot; {t.duration}
-                                    </span>
-                                </dt>
-                                <dd>
-                                    <audio
-                                        controls
-                                        preload="metadata"
-                                        src={t.url}
-                                        style={{ width: "100%", marginTop: "0.5rem" }}
-                                    >
-                                        Your browser does not support the audio element.
-                                    </audio>
-                                </dd>
-                            </div>
-                        ))}
-                    </dl>
-                </section>
+                {TRACKS.map((t, i) => {
+                    const lyrics = LYRICS_BY_TRACK[t.id] ?? []
+                    return (
+                        <section className="rp-section" key={t.id}>
+                            <h2 className="rp-section-title">
+                                <span className="rp-num">{String(i + 1).padStart(2, "0")}.</span>
+                                {t.title}
+                            </h2>
+                            <p className="rp-meta-line">{t.year} &middot; {t.duration}</p>
+                            <LyricsPlayer src={t.url} lyrics={lyrics} />
+                        </section>
+                    )
+                })}
 
             </article>
         </main>
