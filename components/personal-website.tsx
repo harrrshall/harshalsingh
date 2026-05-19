@@ -26,9 +26,7 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             I am an independent researcher and engineer.
           </p>
           <p>
-            I build small, expressive Hinglish text-to-speech systems,
-            and ship applied AI for businesses through{" "}
-            <a href="https://gladium.ai" target="_blank" rel="noopener noreferrer">gladium.ai</a>.
+            I build small, expressive Hinglish text-to-speech systems.
           </p>
           <p>
             My broader interests are computer science, mathematics,
@@ -57,61 +55,34 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <hr className="rp-rule" />
 
         <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">2.</span> Current research</h2>
-
-          <h3 className="rp-subsection-title"><span className="rp-num">2.1</span> Hinglish text-to-speech</h3>
+          <h2 className="rp-section-title"><span className="rp-num">2.</span> Current research &mdash; Hinglish TTS</h2>
           <p>
             Building the world&rsquo;s smallest and best Hinglish TTS &mdash; sub&ndash;25M
             trainable parameters, expressive narration, code-switch native.
-            An open progress preview lives at{" "}
+            Open progress preview:{" "}
             <a href="https://harrrshall.github.io/hinglish-tts/" target="_blank" rel="noopener noreferrer">harrrshall.github.io/hinglish-tts</a>{" "}
-            <span className="rp-meta">(approximately 30 / 100)</span>.
+            <span className="rp-meta">(&asymp; 30 / 100)</span>.
           </p>
-          <p>
-            I am racing four architectures in parallel against a single
-            T4 budget:
-          </p>
-          <ol className="rp-list">
+          <ul className="rp-bullets">
             <li>
-              <em>Matcha-TTS</em> at &asymp; 22M parameters, with a
-              Hindi-fine-tuned multilingual PL-BERT and an
-              EmoSpeech-style per-phoneme emotion head.
+              Racing four architectures in parallel on a single T4 budget:
+              {" "}<em>Matcha-TTS</em> (&asymp; 22M, Hindi PL-BERT + EmoSpeech head),
+              {" "}<em>IndicParler-TTS &rarr; StyleTTS2-lite</em> distillation with composite-reward DPO,
+              {" "}a <em>Mimi-codec + 15&ndash;20M GLA / RWKV-7</em> zero-shot voice-cloning moonshot,
+              {" "}and <em>StyleTTS2-lite</em> warm-started from Kokoro v1.0.
             </li>
             <li>
-              <em>IndicParler-TTS</em> distillation into a StyleTTS2-lite
-              student with composite-reward DPO.
+              Pushing expressivity past the &ldquo;four emotion buttons&rdquo; ceiling with an
+              {" "}<em>EmoSphere++</em> continuous valence&ndash;arousal&ndash;dominance head and
+              training-free <em>EmoSteer-TTS</em> activation steering &mdash; continuous
+              emotion sliders at inference, no retraining.
             </li>
             <li>
-              A <em>Mimi-codec + 15&ndash;20M GLA / RWKV-7</em> language model
-              moonshot targeting true zero-shot voice cloning.
+              Every bet gates through a 2&ndash;8 hour &ldquo;kill-fast&rdquo; T4 listening
+              test before serious training &mdash; ear-tuned for the long tail of
+              Hinglish: retroflex consonants, schwa deletion, code-switch artifacts.
             </li>
-            <li>
-              <em>StyleTTS2-lite</em> warm-started from Kokoro v1.0 with a
-              distilled style-diffusion head.
-            </li>
-          </ol>
-          <p>
-            Beyond architecture, I am pushing expressivity past the
-            &ldquo;four emotion buttons&rdquo; ceiling using an{" "}
-            <em>EmoSphere++</em> continuous valence&ndash;arousal&ndash;dominance head
-            and training-free <em>EmoSteer-TTS</em> activation steering &mdash;
-            continuous emotion sliders at inference time, no retraining
-            required.
-          </p>
-          <p>
-            Every research bet gates through a 2&ndash;8 hour &ldquo;kill-fast&rdquo;
-            listening test on a T4 before any serious training, ear-tuned
-            for the long tail of Hinglish: retroflex consonants, schwa
-            deletion, and code-switch artifacts.
-          </p>
-
-          <h3 className="rp-subsection-title"><span className="rp-num">2.2</span> gladium.ai</h3>
-          <p>
-            Helping businesses integrate AI solutions, from idea to
-            production. Custom agents, model deployment, and the unsexy
-            plumbing that makes them actually ship.{" "}
-            <a href="https://gladium.ai" target="_blank" rel="noopener noreferrer">Visit gladium.ai &rarr;</a>
-          </p>
+          </ul>
         </section>
 
         <hr className="rp-rule" />
