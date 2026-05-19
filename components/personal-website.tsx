@@ -59,9 +59,6 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
           <p>
             Building the world&rsquo;s smallest and best Hinglish TTS &mdash; sub&ndash;25M
             trainable parameters, expressive narration, code-switch native.
-            Open progress preview:{" "}
-            <a href="https://harrrshall.github.io/hinglish-tts/" target="_blank" rel="noopener noreferrer">harrrshall.github.io/hinglish-tts</a>{" "}
-            <span className="rp-meta">(&asymp; 30 / 100)</span>.
           </p>
           <ul className="rp-bullets">
             <li>
@@ -76,11 +73,6 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
               {" "}<em>EmoSphere++</em> continuous valence&ndash;arousal&ndash;dominance head and
               training-free <em>EmoSteer-TTS</em> activation steering &mdash; continuous
               emotion sliders at inference, no retraining.
-            </li>
-            <li>
-              Every bet gates through a 2&ndash;8 hour &ldquo;kill-fast&rdquo; T4 listening
-              test before serious training &mdash; ear-tuned for the long tail of
-              Hinglish: retroflex consonants, schwa deletion, code-switch artifacts.
             </li>
           </ul>
         </section>
