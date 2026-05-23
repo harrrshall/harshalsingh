@@ -43,10 +43,6 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             I am an independent researcher and engineer.
           </p>
           <p>
-            I research text-to-speech architectures, with a focus on
-            naturalness.
-          </p>
-          <p>
             My broader interests are computer science, mathematics,
             physics, and hardware. I learned almost everything I know
             from the internet.
