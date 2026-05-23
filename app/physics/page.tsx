@@ -20,7 +20,7 @@ export default function PhysicsPage() {
                 <header className="rp-header">
                     <h1 className="rp-title">Physics</h1>
                     <p className="rp-byline">Self-study progress log</p>
-                    <p className="rp-date">Last updated {progress.lastUpdated || "—"}</p>
+                    <p className="rp-date">Last updated {progress.lastUpdated || "n/a"}</p>
                 </header>
 
                 <section className="rp-abstract">
@@ -30,7 +30,7 @@ export default function PhysicsPage() {
                         ({progress.completedCount} of {progress.totalCount} sections complete).
                         {progress.currentSection ? (
                             <> Currently working on <em>{progress.currentSection}</em>
-                                {progress.currentTopic ? <> &mdash; {progress.currentTopic}</> : null}.</>
+                                {progress.currentTopic ? <>: {progress.currentTopic}</> : null}.</>
                         ) : null}
                     </p>
                 </section>

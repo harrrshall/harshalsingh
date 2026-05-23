@@ -50,7 +50,7 @@ body {
 
 .rp-header {
   text-align: center;
-  margin-bottom: 2.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .rp-title {
@@ -88,7 +88,7 @@ body {
 /* Abstract ------------------------------------------------------------ */
 
 .rp-abstract {
-  margin: 2.5rem 0 2.25rem;
+  margin: 1.5rem 0 2.25rem;
   padding: 0 1.25rem;
   font-size: 0.97rem;
   color: var(--rp-body);
@@ -240,6 +240,80 @@ body {
   color: var(--rp-body);
 }
 
+/* Writing list ------------------------------------------------------- */
+
+.rp-writing-list {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+}
+
+.rp-writing-item {
+  padding: 1.4rem 0;
+  border-bottom: 1px dotted var(--rp-rule);
+}
+
+.rp-writing-item:first-child { padding-top: 0.5rem; }
+.rp-writing-item:last-child  { border-bottom: none; padding-bottom: 0.5rem; }
+
+.rp-writing-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  line-height: 1.35;
+}
+
+.rp-writing-num {
+  flex: 0 0 auto;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--rp-muted);
+  letter-spacing: 0.03em;
+  padding-top: 0.12rem;
+}
+
+.rp-writing-title {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: var(--rp-ink);
+  text-decoration: none !important;
+  letter-spacing: -0.005em;
+  line-height: 1.3;
+}
+
+.rp-writing-title:hover {
+  text-decoration: underline !important;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--rp-link-hover);
+}
+
+.rp-writing-date {
+  margin: 0.3rem 0 0 calc(0.85rem + 1.6rem);
+  font-size: 0.78rem;
+  color: var(--rp-muted);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.rp-writing-excerpt {
+  margin: 0.55rem 0 0 calc(0.85rem + 1.6rem);
+  color: var(--rp-body);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  max-width: 56ch;
+}
+
+@media (max-width: 640px) {
+  .rp-writing-item { padding: 1.15rem 0; }
+  .rp-writing-head { gap: 0.6rem; }
+  .rp-writing-title { font-size: 1.08rem; }
+  .rp-writing-date,
+  .rp-writing-excerpt { margin-left: calc(0.6rem + 1.4rem); }
+  .rp-writing-excerpt { font-size: 0.9rem; }
+}
+
 /* Table of projects -------------------------------------------------- */
 
 .rp-table {
@@ -333,6 +407,11 @@ body {
   margin: 0.5rem 0 0 !important;
 }
 
+.rp-socials-top {
+  margin-top: 0.7rem !important;
+  gap: 1.1rem;
+}
+
 .rp-social {
   display: inline-flex;
   align-items: center;
@@ -380,6 +459,26 @@ body {
 .rp-post-body p {
   margin: 1.1rem 0;
   white-space: pre-line;
+}
+
+.rp-post-body img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto 0.5rem;
+  border: 1px solid var(--rp-rule);
+  border-radius: 2px;
+  background: #fff;
+}
+
+.rp-post-body p > em:only-child {
+  display: block;
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--rp-muted);
+  margin: 0.4rem auto 1.6rem;
+  max-width: 60ch;
+  line-height: 1.5;
 }
 
 .rp-post-body p:first-child::first-letter {
@@ -557,9 +656,9 @@ body {
   .lp-spacer { height: 7rem; }
 
   .research-page { padding: 2.25rem 1.1rem 3rem; }
-  .rp-header { margin-bottom: 2rem; }
+  .rp-header { margin-bottom: 1.1rem; }
   .rp-title { font-size: 1.75rem; }
-  .rp-abstract { padding: 0 0.25rem; font-size: 0.95rem; margin: 1.75rem 0 1.75rem; }
+  .rp-abstract { padding: 0 0.25rem; font-size: 0.95rem; margin: 1.1rem 0 1.75rem; }
   .rp-abstract p { text-align: left; hyphens: none; }
   body { font-size: 16.5px; line-height: 1.6; }
   .rp-section { margin: 1.75rem 0; }

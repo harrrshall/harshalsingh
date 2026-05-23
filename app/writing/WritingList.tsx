@@ -17,27 +17,33 @@ export default function WritingList({ posts }: { posts: Post[] }) {
                 <hr className="rp-rule" />
 
                 <section className="rp-section">
-                    <dl className="rp-dl">
+                    <ol className="rp-writing-list">
                         {posts.map((post, i) => (
-                            <div key={post.slug}>
-                                <dt>
-                                    <span className="rp-num">
-                                        {String(i + 1).padStart(2, "0")}.
+                            <li key={post.slug} className="rp-writing-item">
+                                <div className="rp-writing-head">
+                                    <span className="rp-writing-num">
+                                        {String(i + 1).padStart(2, "0")}
                                     </span>
-                                    <Link href={`/writing/${post.slug}`}>{post.title}</Link>
-                                    <span className="rp-meta">
-                                        {" "}&middot;{" "}
-                                        {new Date(post.date).toLocaleDateString("en-US", {
-                                            year: "numeric",
-                                            month: "long",
-                                            day: "numeric",
-                                        })}
-                                    </span>
-                                </dt>
-                                <dd>{post.excerpt}</dd>
-                            </div>
+                                    <Link
+                                        href={`/writing/${post.slug}`}
+                                        className="rp-writing-title"
+                                    >
+                                        {post.title}
+                                    </Link>
+                                </div>
+                                <div className="rp-writing-date">
+                                    {new Date(post.date).toLocaleDateString("en-US", {
+                                        year: "numeric",
+                                        month: "long",
+                                        day: "numeric",
+                                    })}
+                                </div>
+                                {post.excerpt && (
+                                    <p className="rp-writing-excerpt">{post.excerpt}</p>
+                                )}
+                            </li>
                         ))}
-                    </dl>
+                    </ol>
                 </section>
 
             </article>

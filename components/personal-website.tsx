@@ -18,6 +18,23 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
           <h1 className="rp-title">Harshal Singh</h1>
           <p className="rp-byline">Independent researcher &middot; builder</p>
           <p className="rp-date">Last updated May 2026</p>
+          <p className="rp-socials rp-socials-top">
+            <a href="https://github.com/harrrshall" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="rp-social">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.27-.01-1.01-.02-1.98-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.19a11.06 11.06 0 0 1 5.79 0c2.21-1.5 3.18-1.19 3.18-1.19.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.77 1.06.77 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.67.8.56 4.57-1.52 7.86-5.83 7.86-10.91C23.5 5.65 18.35.5 12 .5z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/HarshalsinghCN" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="rp-social">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2H21.5l-7.5 8.575L23 22h-6.857l-5.376-7.06L4.6 22H1.34l8.04-9.19L1 2h7l4.86 6.46L18.244 2zm-2.41 18h1.9L7.255 4H5.21l10.624 16z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/harshalsinghcn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="rp-social">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+              </svg>
+            </a>
+          </p>
         </header>
 
         <section className="rp-abstract">
@@ -26,7 +43,8 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             I am an independent researcher and engineer.
           </p>
           <p>
-            I build small, expressive Hinglish text-to-speech systems.
+            I research text-to-speech architectures, with a focus on
+            naturalness.
           </p>
           <p>
             My broader interests are computer science, mathematics,
@@ -40,6 +58,14 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             <a href="https://en.wikipedia.org/wiki/Effective_accelerationism" target="_blank" rel="noopener noreferrer">effective accelerationism</a>.
             The plan is to build profitable companies that accelerate
             human progress.
+          </p>
+          <p>
+            I believe the world is a very malleable place, and that I
+            can bend it according to my will.
+          </p>
+          <p>
+            I may not be the most intelligent person in the room, but I
+            am the most determined and the highest-agency.
           </p>
         </section>
 
@@ -55,24 +81,30 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <hr className="rp-rule" />
 
         <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">2.</span> Current research &mdash; Hinglish TTS</h2>
+          <h2 className="rp-section-title"><span className="rp-num">2.</span> Current research &mdash; TTS &times; neuroscience</h2>
           <p>
-            Building the world&rsquo;s smallest and best Hinglish TTS &mdash; sub&ndash;25M
-            trainable parameters, expressive narration, code-switch native.
+            A small, expressive Hinglish TTS system, approached from the
+            angle of how speech is actually produced and perceived in the brain.
+            Two threads:
           </p>
           <ul className="rp-bullets">
             <li>
-              Racing four architectures in parallel on a single T4 budget:
-              {" "}<em>Matcha-TTS</em> (&asymp; 22M, Hindi PL-BERT + EmoSpeech head),
-              {" "}<em>IndicParler-TTS &rarr; StyleTTS2-lite</em> distillation with composite-reward DPO,
-              {" "}a <em>Mimi-codec + 15&ndash;20M GLA / RWKV-7</em> zero-shot voice-cloning moonshot,
-              {" "}and <em>StyleTTS2-lite</em> warm-started from Kokoro v1.0.
+              <strong>Naturalness.</strong>{" "}
+              <em>
+                What really makes a voice sound natural to the human
+                brain? Is it prosody, breath control, hesitation, micro-timing,
+                emotional variance, spectral texture, or something even deeper
+                inside the auditory system&rsquo;s perception stack? Can we
+                even define naturalness?
+              </em>
             </li>
             <li>
-              Pushing expressivity past the &ldquo;four emotion buttons&rdquo; ceiling with an
-              {" "}<em>EmoSphere++</em> continuous valence&ndash;arousal&ndash;dominance head and
-              training-free <em>EmoSteer-TTS</em> activation steering &mdash; continuous
-              emotion sliders at inference, no retraining.
+              <strong>Optimization, from first principles.</strong>{" "}
+              <em>
+                Instead of endlessly racing to optimize the next matmul,
+                can we step back and ask a deeper question: is there an
+                entirely different way around the problem?
+              </em>
             </li>
           </ul>
         </section>
@@ -122,7 +154,7 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
             <dd>
               An experiment in automating high-quality YouTube video
               creation end to end. Prompt in, ready-to-publish content out.
-              Spun off three open-source siblings &mdash; Open Podcast (text to
+              Spun off three open-source siblings: Open Podcast (text to
               podcast), Open Dubbing (video dubbing &amp; audiobooks), and
               Connected Podcast (AI-simulated conversations with
               historical figures).
@@ -162,36 +194,71 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <hr className="rp-rule" />
 
         <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">6.</span> Other</h2>
+          <h2 className="rp-section-title"><span className="rp-num">6.</span> Fun facts</h2>
+          <ul className="rp-bullets">
+            <li>
+              22. College dropout, in tech for the last 5 years.
+              Currently running{" "}
+              <a href="https://gladium.ai" target="_blank" rel="noopener noreferrer">gladium.ai</a>.
+            </li>
+            <li>
+              Built a product for landlords and tenants that reached
+              over 100,000 users.
+            </li>
+            <li>
+              Scraped the top subreddits, built a deep-research system
+              to analyse them, and published results that crossed
+              200,000 views. A creator with 700k followers reached
+              out.
+            </li>
+            <li>
+              Wrote a CLI that generated AI-written Reddit posts that
+              hit 1,000,000 views.
+            </li>
+            <li>
+              Off-screen: I run, and I box (beginner).
+            </li>
+          </ul>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <section className="rp-section">
+          <h2 className="rp-section-title"><span className="rp-num">7.</span> Other</h2>
           <p>
-            <Link href="/arts" className="rp-arrow-link">Arts &amp; music &rarr;</Link> &middot;{" "}
-            <Link href="/physics" className="rp-arrow-link">Physics self-study log &rarr;</Link>
+            <Link href="/arts" className="rp-arrow-link">Arts &amp; music &rarr;</Link>
+            {/* &middot;{" "}
+            <Link href="/physics" className="rp-arrow-link">Physics self-study log &rarr;</Link> */}
+          </p>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <section className="rp-abstract">
+          <h2 className="rp-abstract-label">Note</h2>
+          <p className="rp-lede">
+            The two current limitations of LLMs, as I see them, are
+            <em> research taste</em> and <em>system design</em>.
+          </p>
+          <p>
+            They can execute, but they cannot tell which problem is worth
+            picking up, and they fall apart the moment a problem requires
+            holding a whole system in mind at once.
+          </p>
+          <p>
+            My bet is that the underlying mathematics is essentially
+            solved. The arbitrage left on the table is in
+            <em> taste</em> and <em>architecture</em>: in choosing
+            the right problem and composing the right system around it.
+            That is where I am pointing my work.
           </p>
         </section>
 
         <hr className="rp-rule" />
 
         <footer className="rp-footer">
-          <h2 className="rp-section-title rp-correspondence">Correspondence</h2>
-          <p className="rp-socials">
-            <a href="https://github.com/harrrshall" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="rp-social">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-                <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.27-.01-1.01-.02-1.98-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.19a11.06 11.06 0 0 1 5.79 0c2.21-1.5 3.18-1.19 3.18-1.19.62 1.58.23 2.75.11 3.04.73.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.4-5.25 5.68.41.36.77 1.06.77 2.14 0 1.55-.01 2.8-.01 3.18 0 .31.21.67.8.56 4.57-1.52 7.86-5.83 7.86-10.91C23.5 5.65 18.35.5 12 .5z"/>
-              </svg>
-            </a>
-            <a href="https://x.com/HarshalsinghCN" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="rp-social">
-              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
-                <path d="M18.244 2H21.5l-7.5 8.575L23 22h-6.857l-5.376-7.06L4.6 22H1.34l8.04-9.19L1 2h7l4.86 6.46L18.244 2zm-2.41 18h1.9L7.255 4H5.21l10.624 16z"/>
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/harshalsinghcn/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="rp-social">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
-                <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
-              </svg>
-            </a>
-          </p>
           <p className="rp-colophon">
-            &copy; {new Date().getFullYear()} Harshal Singh.
+            If you find me cool or interesting, drop me a DM. Let&rsquo;s connect.
           </p>
         </footer>
 
@@ -203,17 +270,17 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
 const PROJECTS = [
   {
     title: "numpygrad",
-    description: "GPT-2 trained from scratch in pure NumPy, verified against PyTorch — with an accompanying blog post deriving the math line by line.",
+    description: "GPT-2 trained from scratch in pure NumPy, verified against PyTorch, with an accompanying blog post deriving the math line by line.",
     github: "https://github.com/harrrshall/numpygrad",
   },
   {
     title: "twitter-memory",
-    description: "MV3 Chrome extension that captures your Twitter attention log — tweets, sessions, dwell time — into a local SQLite DB with daily markdown exports.",
+    description: "MV3 Chrome extension that captures your Twitter attention log (tweets, sessions, dwell time) into a local SQLite DB with daily markdown exports.",
     github: "https://github.com/harrrshall/twitter-memory",
   },
   {
     title: "postforge",
-    description: "Self-improving LinkedIn content engine — multi-agent simulation, EMA weight calibration, 10-persona debate threads, cron automation.",
+    description: "Self-improving LinkedIn content engine: multi-agent simulation, EMA weight calibration, 10-persona debate threads, cron automation.",
     github: "https://github.com/harrrshall/postforge",
   },
   {
@@ -233,7 +300,7 @@ const PROJECTS = [
   },
   {
     title: "picrate",
-    description: "An appearance analyzer — AI tool that scores facial images.",
+    description: "An appearance analyzer, an AI tool that scores facial images.",
     github: "https://github.com/harrrshall/picrate",
   },
   {

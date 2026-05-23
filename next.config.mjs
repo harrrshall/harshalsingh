@@ -1,15 +1,10 @@
 /** @type {import('next').NextConfig} */
-const isProd = process.env.NODE_ENV === 'production'
-const repo = 'harshalsingh'
-
 const nextConfig = {
     output: 'export',
     images: { unoptimized: true },
     trailingSlash: true,
-    basePath: isProd ? `/${repo}` : '',
-    assetPrefix: isProd ? `/${repo}/` : '',
     env: {
-        NEXT_PUBLIC_BASE_PATH: isProd ? `/${repo}` : '',
+        NEXT_PUBLIC_BASE_PATH: '',
     },
 }
 
