@@ -112,89 +112,7 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <hr className="rp-rule" />
 
         <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">3.</span> Writing</h2>
-          <p>
-            Essays at the intersection of work, love, philosophy, and
-            future technology.{" "}
-            <Link href="/writing" className="rp-arrow-link">View all essays &rarr;</Link>
-          </p>
-        </section>
-
-        <hr className="rp-rule" />
-
-        <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">4.</span> Past experiments</h2>
-
-          <dl className="rp-dl">
-            <dt>
-              <span className="rp-num">4.1</span> Humanless
-              <span className="rp-meta"> &middot; <a href="https://humanless.site" target="_blank" rel="noopener noreferrer">humanless.site</a></span>
-            </dt>
-            <dd>
-              A plug-and-play AI tool that transforms existing CCTV footage
-              into actionable business insights. Connect existing cameras,
-              analyze in real time, get reports. Aimed at retail and
-              hospitality.
-            </dd>
-
-            <dt>
-              <span className="rp-num">4.2</span> IFarc
-            </dt>
-            <dd>
-              AI-powered compliance automation for Registered Investment
-              Advisors: automated recordkeeping (Rule 204-2), code-of-ethics
-              monitoring, client onboarding, and marketing review for SEC
-              compliance. The teacher here was the regulated industry
-              itself.
-            </dd>
-
-            <dt>
-              <span className="rp-num">4.3</span> AI Video Creation Platform
-            </dt>
-            <dd>
-              An experiment in automating high-quality YouTube video
-              creation end to end. Prompt in, ready-to-publish content out.
-              Spun off three open-source siblings: Open Podcast (text to
-              podcast), Open Dubbing (video dubbing &amp; audiobooks), and
-              Connected Podcast (AI-simulated conversations with
-              historical figures).
-            </dd>
-
-            <dt>
-              <span className="rp-num">4.4</span> Historical Conversations
-            </dt>
-            <dd>
-              Imagined conversations with Ramanujan, Steve Jobs, and Nikola
-              Tesla.{" "}
-              <a href="https://open.spotify.com/episode/1cQs2EVEVYnZHoweeSCBvU?si=K0iqU3EhQLy76EKD_N3Mug" target="_blank" rel="noopener noreferrer">Listen on Spotify &rarr;</a>
-            </dd>
-          </dl>
-        </section>
-
-        <hr className="rp-rule" />
-
-        <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">5.</span> Projects &amp; code</h2>
-          <p className="rp-meta-line">A selection. All open source.</p>
-
-          <table className="rp-table">
-            <tbody>
-              {PROJECTS.map((p) => (
-                <tr key={p.title}>
-                  <td className="rp-table-name">
-                    <a href={p.github} target="_blank" rel="noopener noreferrer">{p.title}</a>
-                  </td>
-                  <td className="rp-table-desc">{p.description}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </section>
-
-        <hr className="rp-rule" />
-
-        <section className="rp-section">
-          <h2 className="rp-section-title"><span className="rp-num">6.</span> Fun facts</h2>
+          <h2 className="rp-section-title"><span className="rp-num">3.</span> Fun facts</h2>
           <ul className="rp-bullets">
             <li>
               22. College dropout, in tech for the last 5 years.
@@ -219,6 +137,88 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
               Off-screen: I run, and I box (beginner).
             </li>
           </ul>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <section className="rp-section">
+          <h2 className="rp-section-title"><span className="rp-num">4.</span> Writing</h2>
+          <p>
+            Essays at the intersection of work, love, philosophy, and
+            future technology.{" "}
+            <Link href="/writing" className="rp-arrow-link">View all essays &rarr;</Link>
+          </p>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <section className="rp-section">
+          <h2 className="rp-section-title"><span className="rp-num">5.</span> Past experiments</h2>
+
+          <dl className="rp-dl">
+            <dt>
+              <span className="rp-num">5.1</span> Humanless
+              <span className="rp-meta"> &middot; <a href="https://humanless.site" target="_blank" rel="noopener noreferrer">humanless.site</a></span>
+            </dt>
+            <dd>
+              A plug-and-play AI tool that transforms existing CCTV footage
+              into actionable business insights. Connect existing cameras,
+              analyze in real time, get reports. Aimed at retail and
+              hospitality.
+            </dd>
+
+            <dt>
+              <span className="rp-num">5.2</span> IFarc
+            </dt>
+            <dd>
+              AI-powered compliance automation for Registered Investment
+              Advisors: automated recordkeeping (Rule 204-2), code-of-ethics
+              monitoring, client onboarding, and marketing review for SEC
+              compliance. The teacher here was the regulated industry
+              itself.
+            </dd>
+
+            <dt>
+              <span className="rp-num">5.3</span> AI Video Creation Platform
+            </dt>
+            <dd>
+              An experiment in automating high-quality YouTube video
+              creation end to end. Prompt in, ready-to-publish content out.
+              Spun off three open-source siblings: Open Podcast (text to
+              podcast), Open Dubbing (video dubbing &amp; audiobooks), and
+              Connected Podcast (AI-simulated conversations with
+              historical figures).
+            </dd>
+
+            <dt>
+              <span className="rp-num">5.4</span> Historical Conversations
+            </dt>
+            <dd>
+              Imagined conversations with Ramanujan, Steve Jobs, and Nikola
+              Tesla.{" "}
+              <a href="https://open.spotify.com/episode/1cQs2EVEVYnZHoweeSCBvU?si=K0iqU3EhQLy76EKD_N3Mug" target="_blank" rel="noopener noreferrer">Listen on Spotify &rarr;</a>
+            </dd>
+          </dl>
+        </section>
+
+        <hr className="rp-rule" />
+
+        <section className="rp-section">
+          <h2 className="rp-section-title"><span className="rp-num">6.</span> Projects &amp; code</h2>
+          <p className="rp-meta-line">A selection. All open source.</p>
+
+          <table className="rp-table">
+            <tbody>
+              {PROJECTS.map((p) => (
+                <tr key={p.title}>
+                  <td className="rp-table-name">
+                    <a href={p.github} target="_blank" rel="noopener noreferrer">{p.title}</a>
+                  </td>
+                  <td className="rp-table-desc">{p.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </section>
 
         <hr className="rp-rule" />
@@ -259,6 +259,11 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
         <footer className="rp-footer">
           <p className="rp-colophon">
             If you find me cool or interesting, drop me a DM. Let&rsquo;s connect.
+          </p>
+          <p className="rp-contact">
+            <a href="mailto:harshalsingh1223@gmail.com">harshalsingh1223@gmail.com</a>
+            {" "}&middot;{" "}
+            <a href="https://t.me/hsxcyber" target="_blank" rel="noopener noreferrer">Telegram @hsxcyber</a>
           </p>
         </footer>
 

@@ -1,12 +1,13 @@
 import Link from "next/link"
 import type { Post } from "@/lib/posts"
+import BackLink from "./BackLink"
 
 export default function WritingList({ posts }: { posts: Post[] }) {
     return (
         <main className="research-page">
             <article className="research-article">
 
-                <Link href="/" className="rp-backlink">&larr; back</Link>
+                <BackLink fallbackHref="/">&larr; back</BackLink>
 
                 <header className="rp-header">
                     <h1 className="rp-title">Writing</h1>

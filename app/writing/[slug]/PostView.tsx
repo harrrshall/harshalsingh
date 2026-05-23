@@ -3,13 +3,14 @@
 import Link from "next/link"
 import ReactMarkdown from 'react-markdown'
 import type { Post } from "@/lib/posts"
+import BackLink from "../BackLink"
 
 export default function PostView({ post }: { post: Post }) {
     return (
         <main className="research-page">
             <article className="research-article">
 
-                <Link href="/writing" className="rp-backlink">&larr; back to writing</Link>
+                <BackLink fallbackHref="/writing">&larr; back to writing</BackLink>
 
                 <header className="rp-header">
                     <p className="rp-date">
