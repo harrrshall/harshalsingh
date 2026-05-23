@@ -399,23 +399,9 @@ body {
   color: var(--rp-faint);
 }
 
-.rp-contact {
-  margin-top: 0.5rem !important;
-  font-size: 0.82rem;
-  text-align: center;
-  color: var(--rp-body);
-  letter-spacing: 0.01em;
-}
-
-@media (max-width: 480px) {
-  .rp-contact {
-    line-height: 1.7;
-  }
-  .rp-contact > .rp-contact-sep {
-    display: block;
-    height: 0;
-    visibility: hidden;
-  }
+.rp-socials-footer {
+  margin-top: 0.75rem !important;
+  gap: 1.1rem;
 }
 
 .rp-socials {

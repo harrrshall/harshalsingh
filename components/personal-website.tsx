@@ -260,10 +260,17 @@ export default function PersonalWebsite({ physicsProgress: _physicsProgress }: P
           <p className="rp-colophon">
             If you find me cool or interesting, drop me a DM. Let&rsquo;s connect.
           </p>
-          <p className="rp-contact">
-            <a href="mailto:harshalsingh1223@gmail.com">harshalsingh1223@gmail.com</a>
-            {" "}&middot;{" "}
-            <a href="https://t.me/hsxcyber" target="_blank" rel="noopener noreferrer">Telegram @hsxcyber</a>
+          <p className="rp-socials rp-socials-footer">
+            <a href="mailto:harshalsingh1223@gmail.com" aria-label="Email Harshal" className="rp-social">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v.01L12 11l8-4.99V6H4zm16 2.24-7.46 4.66a1 1 0 0 1-1.08 0L4 8.24V18h16V8.24z"/>
+              </svg>
+            </a>
+            <a href="https://t.me/hsxcyber" target="_blank" rel="noopener noreferrer" aria-label="Telegram @hsxcyber" className="rp-social">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+                <path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/>
+              </svg>
+            </a>
           </p>
         </footer>
 
