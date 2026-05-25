@@ -10,6 +10,7 @@ export interface Post {
   date: string;
   excerpt: string;
   content: string;
+  coverImage?: string;
 }
 
 export function getAllPosts(): Post[] {
@@ -31,6 +32,7 @@ export function getAllPosts(): Post[] {
       date: data.date,
       excerpt: data.excerpt,
       content,
+      coverImage: data.coverImage,
     };
   });
 
@@ -52,6 +54,7 @@ export function getPostBySlug(slug: string): Post | null {
       date: data.date,
       excerpt: data.excerpt,
       content,
+      coverImage: data.coverImage,
     };
   } catch (error) {
     return null;

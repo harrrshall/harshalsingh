@@ -133,6 +133,22 @@ body {
   width: 4rem;
 }
 
+/* Cover image --------------------------------------------------------- */
+
+.rp-cover-wrap {
+  margin: 1.5rem 0 0;
+  border-radius: 4px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.rp-cover-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 /* Sections ----------------------------------------------------------- */
 
 .rp-section {

@@ -1,6 +1,7 @@
 'use client'
 
 import Link from "next/link"
+import Image from "next/image"
 import ReactMarkdown from 'react-markdown'
 import type { Post } from "@/lib/posts"
 import BackLink from "../BackLink"
@@ -23,6 +24,19 @@ export default function PostView({ post }: { post: Post }) {
                     <h1 className="rp-title">{post.title}</h1>
                     {post.excerpt ? <p className="rp-byline">{post.excerpt}</p> : null}
                 </header>
+
+                {post.coverImage ? (
+                    <div className="rp-cover-wrap">
+                        <Image
+                            src={post.coverImage}
+                            alt={post.title}
+                            width={1200}
+                            height={630}
+                            className="rp-cover-img"
+                            priority
+                        />
+                    </div>
+                ) : null}
 
                 <hr className="rp-rule" />
 
