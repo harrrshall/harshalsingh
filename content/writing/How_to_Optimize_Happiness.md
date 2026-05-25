@@ -1,7 +1,7 @@
 ---
-title: "How to Optimize Happiness (for ML Researchers)"
+title: "How to Optimize Happiness (for AI Researchers)"
 date: "2026-05-25"
-excerpt: "A practical engineering guide to building AI systems for human well-being - from formalizing happiness as a multi-dimensional construct to reward architecture, failure modes, and the honest open problems."
+excerpt: "A practical engineering guide to building AI systems for human well-being, from formalizing happiness as a multi-dimensional construct to reward architecture, failure modes, and the honest open problems."
 coverImage: "/img/writing/optimize-happiness-cover.png"
 ---
 
