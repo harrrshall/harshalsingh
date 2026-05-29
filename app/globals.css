@@ -502,7 +502,7 @@ body {
   line-height: 1.5;
 }
 
-.rp-post-body p:first-child::first-letter {
+.rp-post-body > p:first-child::first-letter {
   font-size: 3.1rem;
   font-weight: 700;
   float: left;
@@ -709,7 +709,7 @@ body {
 
   /* Drop cap — scaled down so it doesn't crowd small screens */
   .rp-post-body { font-size: 1rem; line-height: 1.68; }
-  .rp-post-body p:first-child::first-letter {
+  .rp-post-body > p:first-child::first-letter {
     font-size: 2.5rem;
     padding: 0.3rem 0.4rem 0 0;
   }
@@ -727,7 +727,7 @@ body {
   .rp-num { font-size: 0.8em; margin-right: 0.4em; }
   .rp-abstract { font-size: 0.92rem; }
   .rp-dl dd { padding-left: 0.85rem; font-size: 0.92rem; }
-  .rp-post-body p:first-child::first-letter {
+  .rp-post-body > p:first-child::first-letter {
     font-size: 2.2rem;
   }
 }
