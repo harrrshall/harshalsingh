@@ -31,7 +31,7 @@ That's the Bradley-Terry part. The loss is one line, `-log σ(s_chosen − s_rej
 
 ## The grind
 
-Then I hit the wall that every honest writeup buries and I'll put up front: the data is 5.34 terabytes of audio if you pre-extract the features. I don't have 5.34 terabytes. Nobody training on a weekend does.
+Then I hit the wall that every honest writeup buries and I'll put up front. The data is 5.34 terabytes of audio if you pre-extract the features. I don't have 5.34 terabytes. Nobody training on a weekend does.
 
 So the trainer extracts features online, decoding audio and running Whisper as it streams pairs, never caching the whole thing. That moved the bottleneck from disk to audio I/O, which is the right place for it to be. The whole project ran on Kaggle's free tier, two T4 GPUs with a 9-hour wall on any single session. I wrote a DataParallel patch to use both GPUs, which doubled throughput to about 17 steps a minute, and a resume scaffold that checkpoints every 500 steps to a versioned Kaggle dataset. When the 9-hour wall hits, you re-run the same notebook and it picks up where it died. The headline run actually resumed mid-flight, from step 8,000, and finished the last two epochs the next day.
 
